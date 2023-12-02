@@ -1,0 +1,146 @@
+
+#MapAppId ".*Vivaldi$","firefox"
+
+# Window Placer
+placer {
+  xorigin = 5  # place the first window at X% from the left
+  yorigin = 5  # place the first window at X% from the top
+  xstep = 5    # step by X% of desktop horizontally
+  ystep = 5    # step by X% of desktop vertically
+  children = true
+}
+
+# Task Switcher
+switcher {
+  interval = 700
+  icons = true
+  labels = false
+  cols = 5
+}
+
+function("SfwbarInit") {
+  SetBarId "bar-0"
+  SetLayer "bottom"
+  SetExclusiveZone "auto"
+#  SetMonitor 
+#  SetBarSize "bar1","800" 
+}
+
+function("ToggleMinimize") {
+  [!Minimized] Minimize
+  [Minimized] UnMinimize
+}
+
+function("ToggleMaximize") {
+  [!Maximized] Maximize
+  [Maximized] UnMaximize
+}
+
+
+menu("winops") {
+  item("close", Close );
+}
+
+# Panel layout
+
+layout "sfwbar" {
+  label { 
+  	css = "* { -GtkWidget-hexpand: true; min-height: 25px; }"
+  }
+
+  taskbar {
+    rows = 1
+    icons = true 
+    labels = false
+#    filter = output
+#    filter_output = true
+#    filter = floating
+    action[3] = Menu "winops"
+    title_width = 20
+  }
+
+  label { 
+  	css = "* { -GtkWidget-hexpand: true; }"
+  }
+
+#  tray {
+#    rows = 1
+#  }
+
+
+}
+
+#CSS
+window {
+  -GtkWidget-direction: bottom;
+  background-color: transparent;
+}
+
+
+#hidden {
+  -GtkWidget-visible: false;
+}
+
+button {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+}
+
+button#taskbar_group_normal,
+button#taskbar_group_normal:hover,
+button#taskbar_group_active {
+  margin: 0px;
+  border: 0px;
+  border-radius: 0px;
+  -GtkWidget-valign: center;
+}
+
+button#taskbar_group_normal image,
+button#taskbar_group_normal:hover image,
+button#taskbar_group_active image {
+  min-height: 30px;
+  min-width: 30px;
+  margin: 0px;
+}
+
+button#taskbar_group_active {
+  background-color: #493B41;
+}
+
+button#taskbar_normal:hover,
+button#taskbar_group_normal:hover,
+button#taskbar_group_active:hover {
+}
+
+button#taskbar_normal grid {
+  padding-right: 0px;
+  margin-right: 0px;
+  min-height: 0px;
+}
+
+button#taskbar_normal image,
+button#taskbar_active image,
+button#taskbar_normal:hover image {
+  min-width: 38px;
+  min-height: 38px;
+}
+
+button#taskbar_normal label,
+button#taskbar_active label,
+button#taskbar_normal:hover label {
+  -GtkWidget-hexpand: true;
+  -GtkWidget-halign: start;
+  padding: 0px 7px 0px 0px;
+}
+
+button#taskbar_normal,
+button#taskbar_active,
+button#taskbar_normal:hover {
+  border-radius: 0;
+  border: 0px;
+  box-shadow: none;
+  -GtkWidget-hexpand: false;
+  -GtkWidget-vexpand: false;
+  min-height: 0px;
+}

@@ -1,0 +1,39 @@
+@import url("./colors.css");
+* {
+    border-radius: 0;
+    font-family: IntelOne Mono;
+    font-size: 11pt;
+    min-height: 0;
+}
+window#waybar {
+    opacity: 0.9;
+    background: @background-darker;
+    color: @foreground;
+    border-bottom: 1px solid black;
+}
+#workspaces button {
+    padding: 0 10px;
+    background: @background;
+    color: @foreground;
+}
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background-image: linear-gradient(0deg, @selection, @background-darker);
+}
+#workspaces button.active {
+    background-image: linear-gradient(0deg, @purple, @selection);
+}
+#taskbar button.active {
+    background-image: linear-gradient(0deg, @selection, @background-darker);
+}
+#clock {
+    padding: 0 4px;
+    background: @background;
+    border-bottom: 1px solid black;
+}
+#tray {
+    padding-right: 10px;
+    padding-left: 10px;
+    border-left: 1px solid black;
+}
