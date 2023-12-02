@@ -1,0 +1,9 @@
+osd.bg.color: #2c2c2c
+osd.border.color: #3294a8
+osd.border.width: 0
+osd.label.text.color: #f1f1f1
+osd.window‐switcher.width: 10
+osd.window‐switcher.padding: 4
+osd.window‐switcher.item.padding.x: 3
+osd.window‐switcher.item.padding.y: 3
+osd.window‐switcher.item.active.border.width: 2

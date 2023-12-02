@@ -1,0 +1,19 @@
+# setup monitors
+/home/ryne/.local/bin/fix-monitors-wl.sh &
+
+sleep 1
+
+# Set background color.
+swaybg-rotate.sh &
+
+waybar >/dev/null 2>&1 &
+sfwbar >/dev/null 2>&1 &
+
+mako >/dev/null 2>&1 &
+
+bauh-tray &
+gammastep-indicator -l 47.2:-123 -t 4200K:3200K &
+
+swayidle -w \
+	timeout 600 'wlopm --off \*' \
+	resume 'wlopm --on \*' >/dev/null 2>&1 &
