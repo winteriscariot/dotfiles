@@ -1,0 +1,122 @@
+diff name:ublock-annoyances lines:3 checksum:a2cc19fad4
+d4 1
+a4 1
+! Diff-Path: ../patches/2024.3.15.1342.patch#ublock-annoyances
+diff name:ublock-badware lines:3 checksum:6ade9921f9
+d4 1
+a4 1
+! Diff-Path: ../patches/2024.3.15.1342.patch#ublock-badware
+diff name:ublock-filters lines:21 checksum:2c741d7047
+d3 2
+a4 2
+! Last modified: Fri, 15 Mar 2024 20:06:30 +0000
+! Diff-Path: ../patches/2024.3.15.1342.patch#ublock-filters
+d9529 1
+a9529 2
+puzzle-loop.com,puzzle-words.com,puzzle-chess.com,puzzle-thermometers.com,puzzle-norinori.com,puzzle-minesweeper.com,puzzle-slant.com,puzzle-lits.com,puzzle-galaxies.com,puzzle-tents.com,puzzle-battleships.com,puzzle-pipes.com,puzzle-hitori.com,puzzle-heyawake.com,puzzle-shingoki.com,puzzle-masyu.com,puzzle-stitches.com,puzzle-aquarium.com,puzzle-tapa.com,puzzle-star-battle.com,puzzle-kakurasu.com,puzzle-skyscrapers.com,puzzle-futoshiki.com,puzzle-shakashaka.com,puzzle-kakuro.com,puzzle-jigsaw-sudoku.com,puzzle-killer-sudoku.com,puzzle-binairo.com,puzzle-nonograms.com,puzzle-sudoku.com,puzzle-light-up.com,puzzle-bridges.com,puzzle-shikaku.com,puzzle-nurikabe.com,puzzle-dominosa.com###MainContainer > [id]:has(> [id^="btIn"] > #bannerTop):style(width: 0px !important; height: 0px !important;)
+puzzle-loop.com,puzzle-words.com,puzzle-chess.com,puzzle-thermometers.com,puzzle-norinori.com,puzzle-minesweeper.com,puzzle-slant.com,puzzle-lits.com,puzzle-galaxies.com,puzzle-tents.com,puzzle-battleships.com,puzzle-pipes.com,puzzle-hitori.com,puzzle-heyawake.com,puzzle-shingoki.com,puzzle-masyu.com,puzzle-stitches.com,puzzle-aquarium.com,puzzle-tapa.com,puzzle-star-battle.com,puzzle-kakurasu.com,puzzle-skyscrapers.com,puzzle-futoshiki.com,puzzle-shakashaka.com,puzzle-kakuro.com,puzzle-jigsaw-sudoku.com,puzzle-killer-sudoku.com,puzzle-binairo.com,puzzle-nonograms.com,puzzle-sudoku.com,puzzle-light-up.com,puzzle-bridges.com,puzzle-shikaku.com,puzzle-nurikabe.com,puzzle-dominosa.com###MainContainer > [id]:has(> [id^="btIn"] > #bannerTop) *:style(visibility: hidden !important;)
+d13139 1
+a13139 1
+! ##^script:has-text(;}}};break;case $.)
+d13141 1
+a13141 1
+123moviefree4u.com,123movies.*,123moviesla.*,123movieweb.*,194.163.183.129,2embed.*,4hiidude.*,6movies.net,720pstream.*,9xmovies.*,aagmaal.*,adsh.cc,adshort.*,afilmyhouse.blogspot.com,ak.sv,allmovieshub.*,animefenix.com,animefrenzy.net,animeshouse.info,animesultra.com,api.webs.moe,apkmody.io,asianplay.*,atglinks.com,atishmkv.*,atomixhq.*,attvideo.com,avimobilemovies.net,backfirstwo.site,bdnewszh.com,ccurl.net,cinema.cimatna.com,cloudvideo.tv,cloudvideotv.*,crackstreams.*,coolrea.link,crazyblog.in,cricstream.*,crictime.*,cypherscans.xyz,daddylive.*,daddylivehd.*,databasegdriveplayer.*,dembed1.com,dembed2.com,divicast.com,dloader.*,dood.*,dooood.*,dvdplay.*,easylinks.*,egynow.cam,egybest.*,embed.meomeo.pw,embedstream.me,extralinks.*,extramovies.*,fanproj.net,faselhd.*,filebox.click,filemoon.*,filmeserialeonline.org,filmesonlinexhd.biz,filmovi.ws,filmy.*,filmyhit.*,filmywap.*,filmyzilla.*,filmyzilla2021.xyz,filmyzilla2022.com,filmyzillafullmovie.waystohunt.info,flexyhit.com,fmovies.*,footyhunter3.xyz,foreverwallpapers.com,foreverwallpapers.com,french-streams.cc,fsapi.*,fslinks.org,fstream365.com,gameshdlive.xyz,gdplayer.*,gdriveplayer.*,gdrivez.xyz,goload.*,gomoviefree.*,gomovies.*,gowatchseries.*,hdmoviesfair.*,hdmoviz.*,hdtoday.to,hinatasoul.com,hindilinks4u.*,hindimovies.to,hitmovies4u.com,hotstar.news,hurawatch.*,hwnaturkya.com,hxfile.co,igg-games.com,isaidub.*,isaidub3.co,isaidubhd.*,jalshamoviezhd.*,jiorockers.*,linkshub.*,linksme.*,livecricket.*,lulustream.com,luluvdo.com,madrasdub.*,membed.net,mgnetu.com,mhdtvsports.me,mkvcinemas.*,mobilemovies.*,movie4kto.net,movies2watch.*,moviesda1.*,moviesda9.co,moviesmeta.*,moviespapa.*,moviewatch.com.pk,moviewatchonline.com.pk,mp3juice.info,mp3juices.cc,mp4moviez.*,mydownloadtube.*,myflixerz.to,neomovies.net,newsrade.com,niaomea.me,nolive.me,novelssites.com,nsw2u.*,nuroflix.*,o2tvseries.*,o2tvseriesz.*,oii.io,paidshitforfree.com,pctfenix.*,pctnew.*,pepperlive.info,pirlotv.*,playertv.net,poscitech.*,poscitesch.com,primewire.*,putlocker68.com,s.to,serienstream.*,sflix.*,shahed4u.*,shaheed4u.*,share.filesh.site,sharkfish.xyz,skidrowcodex.net,speedostream.*,sportcast.*,sports-stream.site,sportskart.*,stream4free.live,streamadblocker.*,streamingcommunity.*,streamnoads.com,tamilarasan.*,tamilfreemp3songs.*,tamilmobilemovies.in,tamilprinthd.*,tapeadsenjoyer.com,tgo-tv.co,thewatchseries.live,tnmusic.in,torrentdosfilmes.*,travelplanspro.com,tusfiles.com,unlimitmovies.com,uploadrar.*,uqload.*,userscloud.com,vid-guard.com,vidcloud9.*,vido.*,vidoo.*,vidsaver.net,vidspeeds.com,vidsrc.*,vipbox.*,vipboxtv.*,viprow.*,viralitytoday.com,voiranime.stream,vudeo.*,vumoo.*,watchdoctorwhoonline.com,watchomovies.*,webhostingpost.com,webseriesclub.com,woxikon.in,yesmovies.*,ylink.bid,ytix.xyz,ytix.xyz##^script:has-text(;}}};break;case $.)
+d13143 2
+a13144 2
+! ##+js(rmnt, script, ;}}};break;case $.)
+123moviefree4u.com,123movies.*,123moviesla.*,123movieweb.*,194.163.183.129,2embed.*,4hiidude.*,6movies.net,720pstream.*,9xmovies.*,aagmaal.*,adsh.cc,adshort.*,afilmyhouse.blogspot.com,ak.sv,allmovieshub.*,animefenix.com,animefrenzy.net,animeshouse.info,animesultra.com,api.webs.moe,apkmody.io,asianplay.*,atglinks.com,atishmkv.*,atomixhq.*,attvideo.com,avimobilemovies.net,backfirstwo.site,bdnewszh.com,ccurl.net,cinema.cimatna.com,cloudvideo.tv,cloudvideotv.*,crackstreams.*,coolrea.link,crazyblog.in,cricstream.*,crictime.*,cypherscans.xyz,daddylive.*,daddylivehd.*,databasegdriveplayer.*,dembed1.com,dembed2.com,divicast.com,dloader.*,dood.*,dooood.*,dvdplay.*,easylinks.*,egynow.cam,embed.meomeo.pw,embedstream.me,extralinks.*,extramovies.*,fanproj.net,faselhd.*,filebox.click,filemoon.*,filmeserialeonline.org,filmesonlinexhd.biz,filmovi.ws,filmy.*,filmyhit.*,filmywap.*,filmyzilla.*,filmyzilla2021.xyz,filmyzilla2022.com,filmyzillafullmovie.waystohunt.info,flexyhit.com,fmovies.*,footyhunter3.xyz,foreverwallpapers.com,foreverwallpapers.com,french-streams.cc,fsapi.*,fslinks.org,fstream365.com,gameshdlive.xyz,gdplayer.*,gdriveplayer.*,gdrivez.xyz,goload.*,gomoviefree.*,gomovies.*,gowatchseries.*,hdmoviesfair.*,hdmoviz.*,hdtoday.to,hinatasoul.com,hindilinks4u.*,hindimovies.to,hitmovies4u.com,hotstar.news,hurawatch.*,hwnaturkya.com,hxfile.co,igg-games.com,isaidub.*,isaidub3.co,isaidubhd.*,jalshamoviezhd.*,jiorockers.*,linkshub.*,linksme.*,livecricket.*,lulustream.com,luluvdo.com,madrasdub.*,membed.net,mgnetu.com,mhdtvsports.me,mkvcinemas.*,mobilemovies.*,movie4kto.net,movies2watch.*,moviesda1.*,moviesmeta.*,moviespapa.*,moviewatch.com.pk,moviewatchonline.com.pk,mp3juice.info,mp3juices.cc,mp4moviez.*,mydownloadtube.*,myflixerz.to,neomovies.net,newsrade.com,niaomea.me,nolive.me,novelssites.com,nsw2u.*,nuroflix.*,o2tvseries.*,o2tvseriesz.*,oii.io,paidshitforfree.com,pctfenix.*,pctnew.*,pepperlive.info,pirlotv.*,playertv.net,poscitech.*,poscitesch.com,primewire.*,putlocker68.com,s.to,serienstream.*,sflix.*,shahed4u.*,shaheed4u.*,share.filesh.site,sharkfish.xyz,skidrowcodex.net,speedostream.*,sportcast.*,sports-stream.site,sportskart.*,stream4free.live,streamadblocker.*,streamingcommunity.*,streamnoads.com,tamilarasan.*,tamilfreemp3songs.*,tamilmobilemovies.in,tamilprinthd.*,tapeadsenjoyer.com,tgo-tv.co,thewatchseries.live,tnmusic.in,torrentdosfilmes.*,travelplanspro.com,tusfiles.com,unlimitmovies.com,uploadrar.*,uqload.*,userscloud.com,vid-guard.com,vidcloud9.*,vido.*,vidoo.*,vidsaver.net,vidspeeds.com,vidsrc.*,vipbox.*,vipboxtv.*,viprow.*,viralitytoday.com,voiranime.stream,vudeo.*,vumoo.*,watchdoctorwhoonline.com,watchomovies.*,webhostingpost.com,webseriesclub.com,woxikon.in,yesmovies.*,ylink.bid,ytix.xyz,ytix.xyz##+js(rmnt, script, ;}}};break;case $.)
+a13169 2
+! ##+js(acs, Object.defineProperty, ;}}};break;case $.)
+moviesda9.co##+js(acs, Object.defineProperty, ;}}};break;case $.)
+diff name:ublock-privacy lines:3 checksum:e1db89230b
+d4 1
+a4 1
+! Diff-Path: ../patches/2024.3.15.1342.patch#ublock-privacy
+diff name:ublock-quick-fixes lines:3 checksum:3bf19d1ef0
+d4 1
+a4 1
+! Diff-Path: ../patches/2024.3.15.1342.patch#ublock-quick-fixes
+diff name:ublock-unbreak lines:5 checksum:72066761bd
+d3 2
+a4 2
+! Last modified: Fri, 15 Mar 2024 18:08:07 +0000
+! Diff-Path: ../patches/2024.3.15.1342.patch#ublock-unbreak
+d2521 1
+diff name:easylist lines:34 checksum:d5653bf92a
+d4 2
+a5 2
+! Last modified: Fri, 15 Mar 2024 18:55:27 +0000
+! Diff-Path: ../patches/2024.3.15.1342.patch#easylist
+a27431 1
+||dolentbahisti.com^
+a33166 1
+||hothoodimur.xyz^
+a33454 1
+||hymenicpirn.com^
+a40988 1
+||orcinolroomthy.com^
+d64079 1
+a64079 1
+hypergames.top,op.gg,thecarconnection.com###banner-container
+a64245 1
+thethaiger.com###custom_html-12
+d65265 1
+a65265 1
+allscrabblewords.com,famously-dead.com,famouslyarrested.com,famouslyscandalous.com,gamesadshopper.com,iamgujarat.com,lolcounter.com,mpog100.com,newszop.com,samayam.com,timesofindia.com,vijaykarnataka.com##.ad1
+a66016 1
+slickdeals.net##.commentsAd
+d68272 1
+a68272 1
+247media.com.ng,appleworld.today,athleticsillustrated.com,businessaccountingbasics.co.uk,circuitbasics.com,closerweekly.com,coincodecap.com,cozyberries.com,dbknews.com,deshdoaba.com,foreverconscious.com,glitched.online,granitegrok.com,intouchweekly.com,kashmirreader.com,kkfm.com,lifeandstylemag.com,londonnewsonline.co.uk,marqueesportsnetwork.com,mensjournal.com,nikonrumors.com,patriotfetch.com,pctechmag.com,prajwaldesai.com,raspians.com,robinhoodnews.com,rok.guide,rsbnetwork.com,showbiz411.com,sportsspectrum.com,stacyknows.com,thecatholictravelguide.com,theoverclocker.com,thethaiger.com,ubuntu101.co.za,wakingtimes.com,washingtonmonthly.com,webscrypto.com,wgow.com,wgowam.com,wlevradio.com##.widget_media_image
+a69152 1
+slickdeals.net##.announcementBar:has(.sponsorContent)
+d69250 3
+a69252 2
+wish.com##div[class^="ProductGrid__FeedTileWidthWrapper-"]:has(div[class^="DesignSpec__TextSpecWrapper-"][color="#6B828F"]:not([data-testid]))
+wish.com##div[class^="ProductTray__ProductStripItem-"]:has(div[class^="DesignSpec__TextSpecWrapper-"][color="#6B828F"][data-testid] + div[class^="DesignSpec__TextSpecWrapper-"][color="#6B828F"])
+a69268 1
+thisday.app##div[style="min-height: 340px;"]:has(div.ad)
+d70576 1
+diff name:easyprivacy lines:10 checksum:f0b8a82314
+d4 2
+a5 2
+! Last modified: Fri, 15 Mar 2024 18:55:27 +0000
+! Diff-Path: ../patches/2024.3.15.1342.patch#easyprivacy
+a1295 1
+/log/client/messages
+a2249 1
+/track.gif?data=
+a14085 1
+||upstract.com/tokei/
+Â”¥Å<      eôÏµeôÏµF«´,eôÏµ   C    ~FETCH,:https://ublockorigin.pages.dev/patches/2024.3.15.1040.patch strongly-framed 1 security-info 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 request-method GET request-Accept-Encoding gzip, deflate, br response-head HTTP/2 200 
+date: Fri, 15 Mar 2024 22:46:13 GMT
+content-type: application/octet-stream
+content-length: 10472
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+etag: "bde720e4ec8197c7bdf7e11745b6afe5"
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=J7jV%2FdWjd555iQkt5QBOwc5ErnxudLj1HgBZDMuZxg2E6sS5Q%2FCHPpABY%2BXAIJ4%2FcYGPjsoucHjLc8CcX80MIEDipXo8Vk6n5iQQQWPrnvEGdsq7QAQOgqKRklYq32YY27VNl5WN6mua"}],"group":"cf-nel","max_age":604800}
+nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+vary: Accept-Encoding
+server: cloudflare
+cf-ray: 865009d13c76308a-SEA
+alt-svc: h3=":443"; ma=86400
+X-Firefox-Spdy: h2
+ original-response-headers date: Fri, 15 Mar 2024 22:46:13 GMT
+content-type: application/octet-stream
+content-length: 10472
+access-control-allow-origin: *
+cache-control: public, max-age=0, must-revalidate
+etag: "bde720e4ec8197c7bdf7e11745b6afe5"
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=J7jV%2FdWjd555iQkt5QBOwc5ErnxudLj1HgBZDMuZxg2E6sS5Q%2FCHPpABY%2BXAIJ4%2FcYGPjsoucHjLc8CcX80MIEDipXo8Vk6n5iQQQWPrnvEGdsq7QAQOgqKRklYq32YY27VNl5WN6mua"}],"group":"cf-nel","max_age":604800}
+nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+vary: Accept-Encoding
+server: cloudflare
+cf-ray: 865009d13c76308a-SEA
+alt-svc: h3=":443"; ma=86400
+X-Firefox-Spdy: h2
+ ctid 1 net-response-time-onstart 111 net-response-time-onstop 112   (è

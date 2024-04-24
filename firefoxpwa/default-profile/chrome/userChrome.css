@@ -1,0 +1,9 @@
+@-moz-document url('chrome://browser/content/browser.xhtml') {
+  .tab-throbber {
+    visibility: hidden;
+    margin-left: -20px;
+  }
+ #statuspanel #statuspanel-label {
+ display:none!important;
+}
+}

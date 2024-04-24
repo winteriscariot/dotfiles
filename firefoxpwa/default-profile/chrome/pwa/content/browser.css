@@ -1,0 +1,377 @@
+@-moz-document url('chrome://browser/content/browser.xhtml') {
+  /* Make buttons and widgets sync colors with the titlebar */
+
+  html {
+    --toolbarbutton-icon-fill: color-mix(in srgb, currentColor 95%, transparent) !important;
+    --button-color: currentColor !important;
+    --button-bgcolor: color-mix(in srgb, currentColor 13%, transparent) !important;
+    --button-hover-bgcolor: color-mix(in srgb, currentColor 17%, transparent) !important;
+    --button-active-bgcolor: color-mix(in srgb, currentColor 30%, transparent) !important;
+    --toolbarseparator-color: color-mix(in srgb, currentColor 20%, transparent) !important;
+  }
+
+  /* Fix tab colors */
+
+  #firefox-view-button[open] > .toolbarbutton-icon,
+  .tab-background:is([selected], [multiselected]) {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    background-image: none !important;
+  }
+
+  /* Fix widget colors */
+
+  #firefox-view-button[open] > .toolbarbutton-icon {
+    color: revert !important;
+  }
+
+  /* Fix window corners with CSD */
+
+  @media (-moz-gtk-csd-available) {
+    #titlebar {
+      visibility: hidden;
+    }
+
+    :root:not([sizemode="fullscreen"]) #titlebar > *:not([collapsed="true"])  {
+      visibility: visible;
+    }
+
+    :root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]) body {
+      border-top-left-radius: env(-moz-gtk-csd-titlebar-radius);
+      border-top-right-radius: env(-moz-gtk-csd-titlebar-radius);
+    }
+  }
+
+  /* Support native window controls when using lwtheme */
+  /* This section is derived from black7375/Firefox-UI-Fix repository on GitHub, licensed under MPL 2.0  */
+  /* Original source: https://github.com/black7375/Firefox-UI-Fix/blob/87334f4d890fbcf927e8435cb36f73e697d26a3b/src/compatibility/_os.scss#L131-L148 */
+
+  @media (-moz-gtk-csd-available) {
+    @supports -moz-bool-pref("firefoxpwa.alwaysUseNativeWindowControls") {
+      .titlebar-button:-moz-lwtheme {
+        appearance: auto !important;
+      }
+
+      .titlebar-min:-moz-lwtheme,
+      .titlebar-max:-moz-lwtheme,
+      .titlebar-restore:-moz-lwtheme,
+      .titlebar-close:-moz-lwtheme {
+        list-style-image: none !important;
+      }
+
+      .titlebar-button:-moz-lwtheme:hover,
+      .titlebar-button:-moz-lwtheme:hover:active {
+        background-color: unset !important;
+        color: unset !important;
+      }
+    }
+  }
+
+  /* Improve icon bar style on macOS */
+
+  @media (-moz-platform: macos) {
+    .site-info {
+      justify-content: center;
+    }
+
+    .titlebar-spacer[type="post-tabs"] {
+      width: 0 !important;
+    }
+  }
+
+  /* Vertically center icon bar elements */
+
+  #TabsToolbar-customization-target {
+    height: 100%;
+  }
+
+  /* Hide titlebar when the icon bar is hidden */
+
+  #titlebar[autohide] {
+    appearance: initial !important;
+  }
+
+  #TabsToolbar[collapsed="true"] {
+    visibility: collapse;
+  }
+
+  /* Hide tabs and tab-related elements when tabs mode is disabled */
+
+  html:not([tabsmode]) #new-tab-button,
+  html:not([tabsmode]) #alltabs-button,
+  html:not([tabsmode]) tabs {
+    display: none;
+  }
+
+  html:not([tabsmode]) #menu_newNavigatorTab,
+  html:not([tabsmode]) #appMenu-new-tab-button2,
+  html:not([tabsmode]) #context-openlinkintab {
+    display: none;
+  }
+
+  html[tabsmode] #site-info {
+    display: none !important;
+  }
+
+  /* Hide the navigation bar when the URL is in scope */
+
+  #nav-bar:not(.shown) > :not(#customizationui-widget-panel) {
+    display: none !important;
+  }
+
+  /* Hide unnecessary elements & Set navigation bar height */
+
+  #nav-bar {
+    min-height: 0 !important;
+  }
+
+  #navigator-toolbox {
+    border-bottom-width: 0 !important;
+  }
+
+  #star-button-box,
+  #tracking-protection-icon-container,
+  html:not([tabsintitlebar]) .site-info > * {
+    display: none;
+  }
+
+  /* Make pre tabs spacer narrower */
+
+  .titlebar-spacer[type="pre-tabs"] {
+    width: 6px !important;
+  }
+
+  /* Remove border from spacers */
+
+  .titlebar-spacer {
+    border-inline-end: none !important;
+  }
+
+  /* Set up new overflow button */
+
+  toolbar {
+    --toolbar-display: none;
+  }
+
+  toolbar[nonemptyoverflow],
+  toolbar[overflowing],
+  toolbar[customizing] {
+    --toolbar-display: flex;
+  }
+
+  .overflow-button {
+    display: var(--toolbar-display);
+  }
+
+  /* Favicon and title for PWA window */
+
+  .site-info {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 6px;
+    height: 30px;
+  }
+
+  .tab-icon-image {
+    flex-shrink: 0;
+  }
+
+  /* Simple toolbar widgets */
+
+  #reader-view-button > .toolbarbutton-icon {
+    list-style-image: url("chrome://browser/skin/reader-mode.svg");
+  }
+
+  #reader-view-button[readeractive] > .toolbarbutton-icon {
+    fill: var(--toolbarbutton-icon-fill-attention);
+    fill-opacity: 1;
+  }
+
+  #copy-link-button > .toolbarbutton-icon {
+    list-style-image: url("chrome://global/skin/icons/link.svg");
+  }
+
+  #share-link-button > .toolbarbutton-icon {
+    list-style-image: url("resource://pwa/icons/share.svg");
+  }
+
+  #open-in-browser-button > .toolbarbutton-icon {
+    list-style-image: url("chrome://browser/skin/window.svg");
+  }
+
+  #close-page-button > .toolbarbutton-icon {
+    list-style-image: url("chrome://global/skin/icons/close.svg");
+    padding-top: 7px !important;
+  }
+
+  #back-button-ffpwa > .toolbarbutton-icon {
+    list-style-image: url("chrome://browser/skin/back.svg");
+  }
+
+  #forward-button-ffpwa > .toolbarbutton-icon {
+    list-style-image: url("chrome://browser/skin/forward.svg");
+  }
+
+  /* Send to device widget */
+
+  #send-to-device-button > .toolbarbutton-icon {
+    list-style-image: url("resource://pwa/icons/send-to-device.svg");
+  }
+
+  #send-to-device-view #appMenu-fxa-status2 {
+    padding: 0 !important;
+  }
+
+  /* Mute toolbar widget */
+
+  #mute-button > .toolbarbutton-icon {
+    list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-playing-small.svg");
+    -moz-context-properties: fill, fill-opacity, stroke;
+    fill: currentColor;
+    stroke: transparent;
+  }
+
+  #mute-button[muted] > .toolbarbutton-icon {
+    list-style-image: url("chrome://browser/skin/tabbrowser/tab-audio-muted-small.svg");
+  }
+
+  #mute-button-autohide-panel {
+    --arrowpanel-padding: 5px 12px;
+  }
+
+  #mute-button-autohide-checkbox {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Tracking protection toolbar widget */
+
+  #tracking-protection-button > .toolbarbutton-icon {
+    list-style-image: url("chrome://browser/skin/tracking-protection.svg");
+  }
+
+  #tracking-protection-button > .toolbarbutton-icon[hasException] {
+    list-style-image: url("chrome://browser/skin/tracking-protection-disabled.svg");
+
+  }
+
+  #tracking-protection-button > .toolbarbutton-icon:not([hasException])[active] {
+    fill: var(--toolbarbutton-icon-fill-attention);
+    fill-opacity: 1;
+  }
+
+  /* Identity toolbar widget */
+
+  #identity-button > .toolbarbutton-icon {
+    list-style-image: url("chrome://global/skin/icons/info.svg");
+  }
+
+  #identity-button > .toolbarbutton-icon[pageproxystate="valid"].chromeUI {
+    list-style-image: url("chrome://branding/content/icon32.png");
+  }
+
+  #identity-button > .toolbarbutton-icon[pageproxystate="valid"].localResource {
+    list-style-image: url("chrome://global/skin/icons/page-portrait.svg");
+  }
+
+  #identity-button > .toolbarbutton-icon[pageproxystate="valid"].extensionPage {
+    list-style-image: url("chrome://mozapps/skin/extensions/extension.svg");
+  }
+
+  #identity-button > .toolbarbutton-icon[pageproxystate="valid"].verifiedDomain,
+  #identity-button > .toolbarbutton-icon[pageproxystate="valid"].mixedActiveBlocked {
+    list-style-image: url("chrome://global/skin/icons/security.svg");
+  }
+
+  #identity-button > .toolbarbutton-icon[pageproxystate="valid"].weakCipher,
+  #identity-button > .toolbarbutton-icon[pageproxystate="valid"].mixedDisplayContent,
+  #identity-button > .toolbarbutton-icon[pageproxystate="valid"].mixedDisplayContentLoadedActiveBlocked,
+  #identity-button > .toolbarbutton-icon[pageproxystate="valid"].certUserOverridden,
+  #identity-button > .toolbarbutton-icon[pageproxystate="valid"].certErrorPage {
+    list-style-image: url("chrome://global/skin/icons/security-warning.svg");
+  }
+
+  #identity-button > .toolbarbutton-icon[pageproxystate="valid"].notSecure,
+  #identity-button > .toolbarbutton-icon[pageproxystate="valid"].mixedActiveContent,
+  #identity-button > .toolbarbutton-icon[pageproxystate="valid"].httpsOnlyErrorPage {
+    list-style-image: url("chrome://global/skin/icons/security-broken.svg");
+  }
+
+  /* Permissions toolbar widget */
+
+  .sharing-icon, .notification-anchor-icon, .blocked-permission-icon {
+    margin-right: 5px;
+  }
+
+  .sharing-icon {
+    margin-inline-start: 0 !important;
+  }
+
+  #identity-permission-box {
+    width: initial !important;
+  }
+
+  #permissions-button[customizing], #permissions-button[customizing] > #identity-permission-box,
+  #permissions-button[in-menu], #permissions-button[in-menu] > #identity-permission-box {
+    display: flex !important;
+  }
+
+  #permissions-button[customizing] > #identity-permission-box > #permissions-granted-icon,
+  #permissions-button[in-menu] > #identity-permission-box > #permissions-granted-icon {
+    display: flex !important;
+  }
+
+  #permissions-button[customizing] > #identity-permission-box > *:not(#permissions-granted-icon),
+  #permissions-button[in-menu] > #identity-permission-box > *:not(#permissions-granted-icon) {
+    display: none !important;
+  }
+
+  #permissions-button[in-menu] > #identity-permission-box {
+    padding-left: 0 !important;
+  }
+
+  #identity-permission-box > box:nth-child(2) {
+    margin-left: 5px;
+  }
+
+  #blocked-permissions-container {
+    margin-right: -5px;
+  }
+
+  /* Notifications toolbar widget */
+
+  #notification-popup-box {
+    padding: var(--toolbarbutton-inner-padding) !important;
+    padding-inline-end: revert !important;
+    margin: 0 !important;
+    height: initial !important;
+  }
+
+  #notification-popup-box > image {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #notifications-button[highlighted] {
+    opacity: 1 !important;
+  }
+
+  #notifications-button[customizing] {
+    display: flex !important;
+  }
+
+  #notifications-button[customizing] > #notification-popup-box {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  #notifications-button[customizing] > #notification-popup-box > #default-notification-icon {
+    display: flex !important;
+  }
+
+  #notification-popup-box[customizing] > #notification-popup-box > *:not(#default-notification-icon) {
+    display: none !important;
+  }
+}

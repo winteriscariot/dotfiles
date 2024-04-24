@@ -1,0 +1,21 @@
+@-moz-document url-prefix('about:preferences') {
+  /* Hide the home category */
+  /* Not needed because it only configures the home and new tab page, which are not accessible */
+  #category-home {
+    display: none;
+  }
+
+  /* Hide the default browser box */
+  /* Not needed because PWAsForFirefox browser installation is not supposed to be made default */
+  #defaultBrowserBox {
+    display: none;
+  }
+
+  /* Hide native window controls preference when CSD is not available */
+  /* Because it doesn't have effect on those platforms */
+  @media not (-moz-gtk-csd-available) {
+    .pref-csd-only {
+      display: none;
+    }
+  }
+}
