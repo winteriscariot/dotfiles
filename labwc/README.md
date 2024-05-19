@@ -1,0 +1,1 @@
+The hook in alpm/hooks should go into /usr/share/libalpm/hooks or /etc/pacman.d/hooks. the hook file itself describes when it'll run.
