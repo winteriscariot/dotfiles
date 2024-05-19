@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+<menu id="root-menu" label="root-menu">
+	<item label="Firefox" icon="firefox">
+		<action name="Execute"><command>/usr/lib/firefox/firefox</command></action>
+	</item>
+	<item label="Terminal" icon="terminal">
+		<action name="Execute"><command>/usr/bin/kitty</command></action>
+	</item>
+	<item label="File Browser" icon="terminal">
+		<action name="Execute"><command>/usr/bin/pcmanfm-qt</command></action>
+	</item>
+	<separator />
