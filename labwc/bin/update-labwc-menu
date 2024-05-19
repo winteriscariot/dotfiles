@@ -1,0 +1,14 @@
+#!/bin/bash
+
+nonRootUser=ryne
+
+# static top menu wipes out existing menu
+su - $nonRootUser -c "cat /home/ryne/.config/labwc/menu-top.txt > /home/ryne/.config/labwc/menu.xml"
+
+#generate new menu and append it to the static top menu
+su - $nonRootUser -c "labwc-menu-generator | tail -n +4 |  head -n `calc $(labwc-menu-generator | tail -n +4 | wc -l)-2` >> /home/ryne/.config/labwc/menu.xml"
+
+su - $nonRootUser -c "cat /home/ryne/.config/labwc/menu-bottom.txt >> /home/ryne/.config/labwc/menu.xml"
+
+#reload labwc config to take effect
+LABWC_PID=$(pgrep labwc) labwc -r
