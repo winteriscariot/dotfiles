@@ -1,0 +1,14 @@
+    <separator />
+	<menu id="Labwc" label="Labwc">
+		<item label="Update Labwc Menu" icon="labwc">
+			<action name="Execute"><command>/home/ryne/.bin/update-labwc-menu-usr</command></action>
+		</item>
+		<item label="Restart Labwc" icon="labwc">
+			<action name="Execute"><command>/usr/bin/labwc -r</command></action>
+		</item>
+		<item label="Exit Labwc" icon="labwc">
+			<action name="Execute"><command>/usr/bin/labwc -e</command></action>
+		</item>
+    </menu> <!-- Labwc Menu -->
+</menu> <!-- root-menu -->
+</openbox_menu>

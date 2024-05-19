@@ -12,9 +12,10 @@
   </core>
   <!-- <font><theme> can be defined without an attribute to set all places -->
   <theme>
-    <name>gruvbox-openbox</name>
-    <cornerRadius>5</cornerRadius>
+    <name>Dynemod</name>
+    <cornerRadius>8</cornerRadius>
     <animateIconify>yes</animateIconify>
+    <dropShadows>yes</dropShadows>
     <font place="ActiveWindow">
       <name>sans</name>
       <size>10</size>
@@ -34,11 +35,11 @@
       <weight>normal</weight>
     </font>
   </theme>
-  <windowSwitcher show="yes" preview="yes" outlines="yes">
+  <windowSwitcher show="yes" preview="no" outlines="no">
     <fields>
-      <!--      <field content="type" width="25%"/>
-      <field content="app_id" width="25%"/> -->
-      <field content="app_id" width="100%"/>
+      <field content="type" width="25%"/>
+      <field content="app_id" width="25%"/>
+      <field content="title" width="100%"/>
     </fields>
   </windowSwitcher>
   <!-- edge strength is in pixels -->
@@ -124,12 +125,7 @@
   <keyboard>
     <repeatRate>25</repeatRate>
     <repeatDelay>600</repeatDelay>
-    <!--    <keybind key="A-Tab">
-      <action name="Execute">
-        <command>/home/ryne/.local/bin/rofi-alt-tab</command>
-      </action>
-    </keybind> -->
-    <keybind key="A-Tab">
+    <keybind key="W-Tab">
       <action name="NextWindow">
         <finalactions>
           <action name="Focus"/>
@@ -138,8 +134,16 @@
         </finalactions>
       </action>
     </keybind>
-    <keybind key="W-Tab">
-      <action name="Execute" command="/home/ryne/rofi-alt-tab-test"/>
+    <keybind key="A-Tab">
+      <action name="Execute" command="/home/ryne/.bin/switcher6"/>
+    </keybind>
+    <keybind key="S-A-c">
+      <action name="MoveTo">
+        <width>50%</width>
+        <height>100%</height>
+        <x>50%</x>
+        <y>0%</y>
+      </action>
     </keybind>
     <keybind key="W-Return">
       <action name="Execute" command="kitty"/>
@@ -184,22 +188,34 @@
       <action name="Iconify"/>
     </keybind>
     <keybind key="A-Space">
-      <action name="ShowMenu" menu="client-menu"/>
+      <action name="Execute" command="rofi -show drun -monitor DP-1"/>
     </keybind>
     <keybind key="XF86_AudioLowerVolume">
-      <action name="Execute" command="amixer sset Master 5%-"/>
+      <action name="Execute" command="amixer sset Master 2%-"/>
     </keybind>
     <keybind key="XF86_AudioRaiseVolume">
-      <action name="Execute" command="amixer sset Master 5%+"/>
+      <action name="Execute" command="amixer sset Master 2%+"/>
     </keybind>
     <keybind key="XF86_AudioMute">
       <action name="Execute" command="amixer sset Master toggle"/>
+    </keybind>
+    <keybind key="XF86_AudioNext">
+      <action name="Execute" command="smart-playerctl next"/>
+    </keybind>
+    <keybind key="XF86_AudioPause">
+      <action name="Execute" command="smart-playerctl play-pause"/>
+    </keybind>
+    <keybind key="XF86_AudioPlay">
+      <action name="Execute" command="smart-playerctl play-pause"/>
     </keybind>
     <keybind key="XF86_MonBrightnessUp">
       <action name="Execute" command="brightnessctl set +10%"/>
     </keybind>
     <keybind key="XF86_MonBrightnessDown">
       <action name="Execute" command="brightnessctl set 10%-"/>
+    </keybind>
+    <keybind key="S-C-e">
+      <action name="Execute" command="emote"/>
     </keybind>
     <!-- SnapToRegion via W-Numpad -->
     <!--
@@ -301,7 +317,10 @@
         <action name="Move"/>
       </mousebind>
       <mousebind button="Left" action="DoubleClick">
-        <action name="ToggleMaximize"/>
+        <action name="Iconify"/>
+      </mousebind>
+      <mousebind action="Click" button="Middle">
+        <action name="Close"/>
       </mousebind>
     </context>
     <context name="Maximize">
@@ -341,9 +360,9 @@
       </mousebind>
     </context>
     <context name="Root">
-      <mousebind button="Left" action="Press">
+      <!--      <mousebind button="Left" action="Press">
         <action name="ShowMenu" menu="root-menu"/>
-      </mousebind>
+      </mousebind>-->
       <mousebind button="Right" action="Press">
         <action name="ShowMenu" menu="root-menu"/>
       </mousebind>
@@ -371,10 +390,11 @@
       - accelProfile [flat|adaptive]
       - tapButtonMap [lrm|lmr]
   -->
+  <tablet mouseEmulation="off"/>
   <libinput>
-    <device category="Logitech G703 LS">
+    <device category="default">
       <naturalScroll>yes</naturalScroll>
-      <leftHanded/>
+      <leftHanded>no</leftHanded>
       <pointerSpeed/>
       <accelProfile/>
       <tap>yes</tap>
@@ -420,4 +440,10 @@
       </windowRule>
     </windowRules>
   -->
+  <windowRules>
+    <windowRule identifier="mpv" matchOnce="false" serverDecoration="no"/>
+    <windowRule identifier="steam_app_*" matchOnce="false" serverDecoration="no"/>
+    <windowRule identifier="gamescope" matchOnce="false" serverDecoration="no"/>
+    <windowRule identifier="imv" matchOnce="false" serverDecoration="yes"/>
+  </windowRules>
 </labwc_config>

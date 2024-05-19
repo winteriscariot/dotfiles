@@ -1,42 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openbox_menu>
 <menu id="root-menu" label="root-menu">
+	<item label="Firefox" icon="firefox">
+		<action name="Execute"><command>/usr/lib/firefox/firefox</command></action>
+	</item>
+	<item label="Terminal" icon="terminal">
+		<action name="Execute"><command>/usr/bin/kitty</command></action>
+	</item>
+	<item label="File Browser" icon="terminal">
+		<action name="Execute"><command>/usr/bin/pcmanfm-qt</command></action>
+	</item>
+	<separator />
 	<menu id="Accessories" label="Accessories">
-		<item label="Bitwarden" icon="bitwarden">
-			<action name="Execute"><command>bitwarden-desktop</command></action>
-		</item>
 		<item label="Bulk Rename" icon="org.xfce.thunar">
 			<action name="Execute"><command>thunar --bulk-rename</command></action>
 		</item>
 		<item label="Character Map" icon="accessories-character-map">
 			<action name="Execute"><command>gucharmap</command></action>
 		</item>
-		<item label="DB Browser for SQLite" icon="sqlitebrowser">
-			<action name="Execute"><command>sqlitebrowser</command></action>
+		<item label="Emote" icon="emote">
+			<action name="Execute"><command>emote</command></action>
 		</item>
-		<item label="FeatherPad" icon="featherpad">
-			<action name="Execute"><command>featherpad</command></action>
-		</item>
-		<item label="Galculator" icon="galculator">
-			<action name="Execute"><command>galculator</command></action>
-		</item>
-		<item label="Gammastep Indicator" icon="gammastep">
-			<action name="Execute"><command>gammastep-indicator</command></action>
+		<item label="KeePassXC" icon="keepassxc">
+			<action name="Execute"><command>keepassxc</command></action>
 		</item>
 		<item label="Kvantum Manager" icon="kvantum">
 			<action name="Execute"><command>kvantummanager</command></action>
 		</item>
-		<item label="LibreOffice" icon="libreoffice-startcenter">
-			<action name="Execute"><command>libreoffice</command></action>
-		</item>
 		<item label="Main Menu" icon="alacarte">
 			<action name="Execute"><command>alacarte</command></action>
 		</item>
-		<item label="OpenRGB" icon="OpenRGB">
-			<action name="Execute"><command>openrgb</command></action>
+		<item label="Parcellite" icon="parcellite">
+			<action name="Execute"><command>parcellite</command></action>
 		</item>
-		<item label="Picom" icon="picom">
-			<action name="Execute"><command>/home/ryne/.bin/picom.sh</command></action>
+		<item label="PCManFM-Qt File Manager" icon="system-file-manager">
+			<action name="Execute"><command>pcmanfm-qt</command></action>
+		</item>
+		<item label="picom" icon="picom">
+			<action name="Execute"><command>picom</command></action>
 		</item>
 		<item label="Plank" icon="plank">
 			<action name="Execute"><command>plank</command></action>
@@ -44,17 +45,23 @@
 		<item label="Protontricks" icon="wine">
 			<action name="Execute"><command>protontricks --no-term --gui</command></action>
 		</item>
+		<item label="Protontricks" icon="wine">
+			<action name="Execute"><command>protontricks --no-term --gui</command></action>
+		</item>
+		<item label="Qalculate!" icon="qalculate">
+			<action name="Execute"><command>qalculate-gtk</command></action>
+		</item>
 		<item label="QtFM" icon="qtfm">
 			<action name="Execute"><command>qtfm</command></action>
-		</item>
-		<item label="Redshift" icon="redshift">
-			<action name="Execute"><command>redshift-gtk</command></action>
 		</item>
 		<item label="Software Token" icon="stoken-gui">
 			<action name="Execute"><command>stoken-gui</command></action>
 		</item>
 		<item label="Software Token (small)" icon="stoken-gui">
 			<action name="Execute"><command>stoken-gui --small</command></action>
+		</item>
+		<item label="Solaar" icon="solaar">
+			<action name="Execute"><command>solaar</command></action>
 		</item>
 		<item label="Vim" icon="gvim">
 			<action name="Execute"><command>vim</command></action>
@@ -76,24 +83,6 @@
 		<item label="CMake" icon="CMakeSetup">
 			<action name="Execute"><command>cmake-gui</command></action>
 		</item>
-		<item label="DB Browser for SQLite" icon="sqlitebrowser">
-			<action name="Execute"><command>sqlitebrowser</command></action>
-		</item>
-		<item label="Electron 25" icon="electron25">
-			<action name="Execute"><command>electron25</command></action>
-		</item>
-		<item label="Qt Assistant" icon="assistant">
-			<action name="Execute"><command>assistant</command></action>
-		</item>
-		<item label="Qt Designer" icon="QtProject-designer">
-			<action name="Execute"><command>designer</command></action>
-		</item>
-		<item label="Qt Linguist" icon="linguist">
-			<action name="Execute"><command>linguist</command></action>
-		</item>
-		<item label="Qt QDBusViewer" icon="qdbusviewer">
-			<action name="Execute"><command>qdbusviewer</command></action>
-		</item>
 		<item label="VSCodium" icon="vscodium">
 			<action name="Execute"><command>/usr/bin/codium --unity-launch</command></action>
 		</item>
@@ -101,81 +90,40 @@
 			<action name="Execute"><command>/usr/bin/codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --unity-launch</command></action>
 		</item>
 	</menu> <!-- Development -->
-	<menu id="Education" label="Education">
-		<item label="LibreOffice Math" icon="libreoffice-math">
-			<action name="Execute"><command>libreoffice --math</command></action>
-		</item>
-	</menu> <!-- Education -->
 	<menu id="Games" label="Games">
-		<item label="Apex Legends" icon="steam_icon_1172470">
-			<action name="Execute"><command>steam steam://rungameid/1172470</command></action>
-		</item>
 		<item label="Chiaki" icon="chiaki">
 			<action name="Execute"><command>chiaki</command></action>
-		</item>
-		<item label="Deadlink Demo" icon="steam_icon_2051430">
-			<action name="Execute"><command>steam steam://rungameid/2051430</command></action>
-		</item>
-		<item label="Deep Rock Galactic" icon="steam_icon_548430">
-			<action name="Execute"><command>steam steam://rungameid/548430</command></action>
 		</item>
 		<item label="Heroic Games Launcher" icon="heroic">
 			<action name="Execute"><command>/opt/Heroic/heroic</command></action>
 		</item>
+		<item label="itch" icon="itch">
+			<action name="Execute"><command>itch</command></action>
+		</item>
 		<item label="Lutris" icon="lutris">
 			<action name="Execute"><command>lutris</command></action>
 		</item>
-		<item label="Steam (Screensaver-inibit)" icon="steam">
-			<action name="Execute"><command>/home/ryne/.bin/steam-wrapper.sh</command></action>
+		<item label="Steam (Native)" icon="steam">
+			<action name="Execute"><command>/usr/bin/steam-native</command></action>
 		</item>
-		<item label="Warhammer 40,000: Battlesector" icon="steam_icon_1295500">
-			<action name="Execute"><command>steam steam://rungameid/1295500</command></action>
-		</item>
-		<item label="Xonotic (GLX)" icon="xonotic">
-			<action name="Execute"><command>/usr/bin/xonotic-glx</command></action>
-		</item>
-		<item label="Xonotic (SDL)" icon="xonotic">
-			<action name="Execute"><command>/usr/bin/xonotic-sdl</command></action>
+		<item label="Steam (Runtime)" icon="steam">
+			<action name="Execute"><command>/usr/bin/steam-runtime</command></action>
 		</item>
 	</menu> <!-- Games -->
 	<menu id="Graphics" label="Graphics">
-		<item label="Document Viewer" icon="org.gnome.Evince">
-			<action name="Execute"><command>evince</command></action>
-		</item>
-		<item label="Drawing" icon="com.github.maoschanz.drawing">
-			<action name="Execute"><command>drawing</command></action>
-		</item>
-		<item label="feh" icon="feh">
-			<action name="Execute"><command>feh -B "#2B2A33" --scale-down --auto-zoom</command></action>
-		</item>
 		<item label="Flameshot" icon="org.flameshot.Flameshot">
 			<action name="Execute"><command>/usr/bin/flameshot</command></action>
 		</item>
 		<item label="GNU Image Manipulation Program" icon="gimp">
 			<action name="Execute"><command>gimp-2.10</command></action>
 		</item>
-		<item label="Inkscape" icon="org.inkscape.Inkscape">
-			<action name="Execute"><command>inkscape</command></action>
-		</item>
-		<item label="Lector" icon="Lector">
-			<action name="Execute"><command>lector</command></action>
-		</item>
-		<item label="LibreOffice Draw" icon="libreoffice-draw">
-			<action name="Execute"><command>libreoffice --draw</command></action>
-		</item>
-		<item label="mpv Image Viewer" icon="mpv">
-			<action name="Execute"><command>mpv --profile=image --player-operation-mode=pseudo-gui --</command></action>
+		<item label="MyPaint" icon="org.mypaint.MyPaint">
+			<action name="Execute"><command>mypaint</command></action>
 		</item>
 	</menu> <!-- Graphics -->
 	<menu id="Internet" label="Internet">
 		<item label="Advanced Network Configuration" icon="preferences-system-network">
 			<action name="Execute"><command>nm-connection-editor</command></action>
-		</item>
-		<item label="Amazon" icon="/home/ryne/Pictures/Icons/amazon.png">
-			<action name="Execute"><command>/home/ryne/.electronapps/Amazon-linux-x64/Amazon</command></action>
-		</item>
-		<item label="ArmCord" icon="discord">
-			<action name="Execute"><command>/usr/bin/armcord</command></action>
 		</item>
 		<item label="Avahi SSH Server Browser" icon="network-wired">
 			<action name="Execute"><command>/usr/bin/bssh</command></action>
@@ -183,82 +131,70 @@
 		<item label="Avahi VNC Server Browser" icon="network-wired">
 			<action name="Execute"><command>/usr/bin/bvnc</command></action>
 		</item>
-		<item label="BlueBubbles" icon="/home/ryne/Pictures/Icons/bluebubbles.png">
+		<item label="BlueBubbles" icon="bluebubbles">
 			<action name="Execute"><command>bluebubbles</command></action>
 		</item>
-		<item label="Brave" icon="brave-desktop">
-			<action name="Execute"><command>brave</command></action>
-		</item>
 		<item label="Chromium" icon="chromium">
-			<action name="Execute"><command>/usr/bin/chromium --enable-features=UseOzonePlatform --ozone-platform=wayland</command></action>
+			<action name="Execute"><command>/usr/bin/chromium</command></action>
 		</item>
-		<item label="Discord" icon="com.discordapp.Discord">
-			<action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=discord com.discordapp.Discord</command></action>
-		</item>
-		<item label="Discord qt" icon="discord">
-			<action name="Execute"><command>/usr/bin/qtws /home/ryne/.local/share/qtws/apps/discord.app</command></action>
+		<item label="Discord" icon="discord">
+			<action name="Execute"><command>/usr/bin/discord</command></action>
 		</item>
 		<item label="Firefox Web Browser" icon="firefox">
 			<action name="Execute"><command>/usr/lib/firefox/firefox</command></action>
 		</item>
-		<item label="FreshRSS" icon="/home/ryne/Pictures/Icons/rss-icon.png">
-			<action name="Execute"><command>/home/ryne/.electronapps/FreshRSS-linux-x64/FreshRSS</command></action>
+		<item label="Google Chrome" icon="google-chrome">
+			<action name="Execute"><command>/usr/bin/google-chrome-stable</command></action>
 		</item>
-		<item label="Instagram" icon="/home/ryne/Pictures/Icons/instagram.png">
-			<action name="Execute"><command>/home/ryne/.electronapps/Instagram-linux-x64/Instagram</command></action>
-		</item>
-		<item label="Kasts" icon="org.kde.kasts">
-			<action name="Execute"><command>/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=kasts org.kde.kasts</command></action>
+		<item label="NewsFlash" icon="io.gitlab.news_flash.NewsFlash">
+			<action name="Execute"><command>io.gitlab.news_flash.NewsFlash</command></action>
 		</item>
 		<item label="Popcorn Time" icon="popcorntime">
 			<action name="Execute"><command>popcorntime</command></action>
 		</item>
-		<item label="qBittorrent" icon="qbittorrent">
-			<action name="Execute"><command>qbittorrent</command></action>
+		<item label="ProtonMail Bridge" icon="/usr/share/icons/hicolor/scalable/apps/protonmail-bridge.svg">
+			<action name="Execute"><command>/usr/bin/protonmail-bridge</command></action>
 		</item>
 		<item label="Remmina" icon="org.remmina.Remmina">
-			<action name="Execute"><command>/home/ryne/.bin/remmina-wrapper</command></action>
+			<action name="Execute"><command>remmina-file-wrapper</command></action>
+		</item>
+		<item label="RSS Guard Lite" icon="io.github.martinrotter.rssguardlite">
+			<action name="Execute"><command>rssguard</command></action>
 		</item>
 		<item label="Signal" icon="signal-desktop">
 			<action name="Execute"><command>signal-desktop --</command></action>
 		</item>
-		<item label="Steam (Screensaver-inibit)" icon="steam">
-			<action name="Execute"><command>/home/ryne/.bin/steam-wrapper.sh</command></action>
+		<item label="Steam (Native)" icon="steam">
+			<action name="Execute"><command>/usr/bin/steam-native</command></action>
+		</item>
+		<item label="Steam (Runtime)" icon="steam">
+			<action name="Execute"><command>/usr/bin/steam-runtime</command></action>
 		</item>
 		<item label="Telegram Desktop" icon="telegram">
 			<action name="Execute"><command>telegram-desktop --</command></action>
 		</item>
-		<item label="Threads" icon="/home/ryne/Pictures/Icons/threads.png">
-			<action name="Execute"><command>/home/ryne/.electronapps/Threads-linux-x64/Threads</command></action>
-		</item>
-		<item label="Threads (wlr)" icon="/home/ryne/Pictures/Icons/threads.png">
-			<action name="Execute"><command>/home/ryne/.electronapps/Threads-linux-x64/Threads --enable-features=UseOzonePlatform --ozone-platform=wayland</command></action>
-		</item>
 		<item label="Thunderbird" icon="org.mozilla.Thunderbird">
 			<action name="Execute"><command>thunderbird</command></action>
 		</item>
-		<item label="X11VNC Server" icon="computer">
-			<action name="Execute"><command>x11vnc -gui tray=setpass -rfbport PROMPT -bg -o %HOME/.x11vnc.log.%VNCDISPLAY</command></action>
+		<item label="Tor Browser" icon="tor-browser">
+			<action name="Execute"><command>tor-browser</command></action>
 		</item>
-		<item label="Zoom" icon="Zoom">
-			<action name="Execute"><command>/usr/bin/zoom</command></action>
+		<item label="Transmission (Qt)" icon="transmission">
+			<action name="Execute"><command>transmission-qt</command></action>
 		</item>
 	</menu> <!-- Internet -->
 	<menu id="Multimedia" label="Multimedia">
-		<item label="Audio Recorder" icon="audio-recorder">
-			<action name="Execute"><command>audio-recorder</command></action>
-		</item>
 		<item label="mpv Media Player" icon="mpv">
 			<action name="Execute"><command>mpv --player-operation-mode=pseudo-gui --</command></action>
 		</item>
-		<item label="Plex" icon="plex-desktop">
-			<action name="Execute"><command>plex-desktop</command></action>
+		<item label="OpenShot Video Editor" icon="openshot-qt">
+			<action name="Execute"><command>openshot-qt</command></action>
 		</item>
 		<item label="Popcorn Time" icon="popcorntime">
 			<action name="Execute"><command>popcorntime</command></action>
 		</item>
 		<item label="PulseAudio Volume Control" icon="multimedia-volume-control">
-			<action name="Execute"><command>pavucontrol</command></action>
+			<action name="Execute"><command>pavucontrol-qt</command></action>
 		</item>
 		<item label="Qt V4L2 test Utility" icon="qv4l2">
 			<action name="Execute"><command>qv4l2</command></action>
@@ -269,43 +205,19 @@
 		<item label="Spotify (Launcher)" icon="spotify-launcher">
 			<action name="Execute"><command>spotify-launcher</command></action>
 		</item>
-		<item label="VLC media player" icon="vlc">
-			<action name="Execute"><command>/usr/bin/vlc --started-from-file</command></action>
-		</item>
-		<item label="Vocal" icon="podcast">
-			<action name="Execute"><command>gtk3-nocsd com.github.needleandthread.vocal</command></action>
-		</item>
 		<item label="Volctl" icon="multimedia-volume-control">
 			<action name="Execute"><command>volctl</command></action>
 		</item>
+		<item label="Webcamoid" icon="webcamoid">
+			<action name="Execute"><command>webcamoid</command></action>
+		</item>
 	</menu> <!-- Multimedia -->
 	<menu id="Office" label="Office">
-		<item label="CoolReader3" icon="ebook-reader">
+		<item label="AbiWord" icon="abiword">
+			<action name="Execute"><command>abiword</command></action>
+		</item>
+		<item label="CoolReader3" icon="cr3">
 			<action name="Execute"><command>cr3</command></action>
-		</item>
-		<item label="Document Viewer" icon="org.gnome.Evince">
-			<action name="Execute"><command>evince</command></action>
-		</item>
-		<item label="LibreOffice" icon="libreoffice-startcenter">
-			<action name="Execute"><command>libreoffice</command></action>
-		</item>
-		<item label="LibreOffice Base" icon="libreoffice-base">
-			<action name="Execute"><command>libreoffice --base</command></action>
-		</item>
-		<item label="LibreOffice Calc" icon="libreoffice-calc">
-			<action name="Execute"><command>libreoffice --calc</command></action>
-		</item>
-		<item label="LibreOffice Draw" icon="libreoffice-draw">
-			<action name="Execute"><command>libreoffice --draw</command></action>
-		</item>
-		<item label="LibreOffice Impress" icon="libreoffice-impress">
-			<action name="Execute"><command>libreoffice --impress</command></action>
-		</item>
-		<item label="LibreOffice Math" icon="libreoffice-math">
-			<action name="Execute"><command>libreoffice --math</command></action>
-		</item>
-		<item label="LibreOffice Writer" icon="libreoffice-writer">
-			<action name="Execute"><command>libreoffice --writer</command></action>
 		</item>
 		<item label="qpdfview" icon="qpdfview">
 			<action name="Execute"><command>qpdfview --unique</command></action>
@@ -315,29 +227,32 @@
 		<item label="Advanced Network Configuration" icon="preferences-system-network">
 			<action name="Execute"><command>nm-connection-editor</command></action>
 		</item>
+		<item label="Bluetooth Adapters" icon="blueman-device">
+			<action name="Execute"><command>blueman-adapters</command></action>
+		</item>
+		<item label="Bluetooth Manager" icon="blueman">
+			<action name="Execute"><command>blueman-manager</command></action>
+		</item>
 		<item label="Customize Look and Feel" icon="preferences-desktop-theme">
 			<action name="Execute"><command>lxappearance</command></action>
 		</item>
-		<item label="Displays" icon="network.cycles.wdisplays">
-			<action name="Execute"><command>wdisplays</command></action>
+		<item label="Desktop" icon="user-desktop">
+			<action name="Execute"><command>pcmanfm-qt --desktop-pref=general</command></action>
+		</item>
+		<item label="Keyboard and Mouse" icon="input-keyboard">
+			<action name="Execute"><command>lxinput</command></action>
 		</item>
 		<item label="Kvantum Manager" icon="kvantum">
 			<action name="Execute"><command>kvantummanager</command></action>
 		</item>
-		<item label="Labwc Config" icon="labwc-tweaks">
+		<item label="labwc-tweaks" icon="labwc_tweaks">
 			<action name="Execute"><command>labwc-tweaks</command></action>
 		</item>
 		<item label="Main Menu" icon="alacarte">
 			<action name="Execute"><command>alacarte</command></action>
 		</item>
-		<item label="Openbox Configuration Manager" icon="obconf">
-			<action name="Execute"><command>obconf</command></action>
-		</item>
-		<item label="PulseAudio Preferences" icon="preferences-desktop">
-			<action name="Execute"><command>paprefs</command></action>
-		</item>
 		<item label="PulseAudio Volume Control" icon="multimedia-volume-control">
-			<action name="Execute"><command>pavucontrol</command></action>
+			<action name="Execute"><command>pavucontrol-qt</command></action>
 		</item>
 		<item label="Qt5 Settings" icon="preferences-desktop-theme">
 			<action name="Execute"><command>qt5ct</command></action>
@@ -346,22 +261,13 @@
 			<action name="Execute"><command>qt6ct</command></action>
 		</item>
 		<item label="Remmina" icon="org.remmina.Remmina">
-			<action name="Execute"><command>/home/ryne/.bin/remmina-wrapper</command></action>
+			<action name="Execute"><command>remmina-file-wrapper</command></action>
 		</item>
 		<item label="Tint2 Settings" icon="tint2conf">
 			<action name="Execute"><command>tint2conf</command></action>
 		</item>
 	</menu> <!-- Settings -->
 	<menu id="System" label="System">
-		<item label="AMDGPU TOP (GUI)" icon="(null)">
-			<action name="Execute"><command>amdgpu_top --gui</command></action>
-		</item>
-		<item label="Applications (bauh)" icon="bauh">
-			<action name="Execute"><command>/usr/bin/bauh</command></action>
-		</item>
-		<item label="Applications (bauh-tray)" icon="bauh">
-			<action name="Execute"><command>/usr/bin/bauh-tray</command></action>
-		</item>
 		<item label="Avahi Zeroconf Browser" icon="network-wired">
 			<action name="Execute"><command>/usr/bin/avahi-discover</command></action>
 		</item>
@@ -370,6 +276,9 @@
 		</item>
 		<item label="Bulk Rename" icon="org.xfce.thunar">
 			<action name="Execute"><command>thunar --bulk-rename</command></action>
+		</item>
+		<item label="Console" icon="org.gnome.Console">
+			<action name="Execute"><command>kgx</command></action>
 		</item>
 		<item label="dconf Editor" icon="ca.desrt.dconf-editor">
 			<action name="Execute"><command>dconf-editor</command></action>
@@ -383,17 +292,17 @@
 		<item label="kitty" icon="kitty">
 			<action name="Execute"><command>kitty</command></action>
 		</item>
-		<item label="Labwc Config" icon="labwc-tweaks">
+		<item label="labwc-tweaks" icon="labwc_tweaks">
 			<action name="Execute"><command>labwc-tweaks</command></action>
-		</item>
-		<item label="LSHW" icon="/usr/share/lshw/artwork/logo.svg">
-			<action name="Execute"><command>/usr/sbin/gtk-lshw</command></action>
 		</item>
 		<item label="nvtop" icon="nvtop">
 			<action name="Execute"><command>nvtop</command></action>
 		</item>
-		<item label="Parental Controls" icon="org.freedesktop.MalcontentControl">
-			<action name="Execute"><command>malcontent-control</command></action>
+		<item label="OpenJDK Java 22 Console" icon="java22-openjdk">
+			<action name="Execute"><command>/usr/lib/jvm/java-22-openjdk/bin/jconsole</command></action>
+		</item>
+		<item label="OpenJDK Java 22 Shell" icon="java22-openjdk">
+			<action name="Execute"><command>/usr/lib/jvm/java-22-openjdk/bin/jshell</command></action>
 		</item>
 		<item label="Task Manager" icon="utilities-system-monitor">
 			<action name="Execute"><command>lxtask</command></action>
@@ -406,104 +315,14 @@
 		</item>
 	</menu> <!-- System -->
 	<menu id="Other" label="Other">
-		<item label="Android Keyboard (AOSP)" icon="/home/ryne/.local/share/waydroid/data/icons/com.android.inputmethod.latin.png">
-			<action name="Execute"><command>waydroid app launch com.android.inputmethod.latin</command></action>
-		</item>
-		<item label="Aurora Droid" icon="/home/ryne/.local/share/waydroid/data/icons/com.aurora.adroid.png">
-			<action name="Execute"><command>waydroid app launch com.aurora.adroid</command></action>
-		</item>
-		<item label="Aurora Services" icon="/home/ryne/.local/share/waydroid/data/icons/com.aurora.services.png">
-			<action name="Execute"><command>waydroid app launch com.aurora.services</command></action>
-		</item>
-		<item label="Browser" icon="/home/ryne/.local/share/waydroid/data/icons/org.lineageos.jelly.png">
-			<action name="Execute"><command>waydroid app launch org.lineageos.jelly</command></action>
-		</item>
-		<item label="Calculator" icon="/home/ryne/.local/share/waydroid/data/icons/com.android.calculator2.png">
-			<action name="Execute"><command>waydroid app launch com.android.calculator2</command></action>
-		</item>
-		<item label="Calendar" icon="/home/ryne/.local/share/waydroid/data/icons/org.lineageos.etar.png">
-			<action name="Execute"><command>waydroid app launch org.lineageos.etar</command></action>
-		</item>
-		<item label="Camera" icon="/home/ryne/.local/share/waydroid/data/icons/com.android.camera2.png">
-			<action name="Execute"><command>waydroid app launch com.android.camera2</command></action>
-		</item>
-		<item label="Clock" icon="/home/ryne/.local/share/waydroid/data/icons/com.android.deskclock.png">
-			<action name="Execute"><command>waydroid app launch com.android.deskclock</command></action>
-		</item>
-		<item label="Contacts" icon="/home/ryne/.local/share/waydroid/data/icons/com.android.contacts.png">
-			<action name="Execute"><command>waydroid app launch com.android.contacts</command></action>
-		</item>
-		<item label="Dark and Darker A5" icon="FB19_DungeonCrawler.0">
-			<action name="Execute"><command>env WINEPREFIX="/home/ryne/Games/dark-and-darker" wine C:\\users\\ryne\\AppData\\Roaming\\Microsoft\\Windows\\Start\ Menu\\Programs\\IRONMACE\\Dark\ and\ Darker\ A5\\Dark\ and\ Darker\ A5.lnk</command></action>
-		</item>
-		<item label="Files" icon="/home/ryne/.local/share/waydroid/data/icons/com.android.documentsui.png">
-			<action name="Execute"><command>waydroid app launch com.android.documentsui</command></action>
-		</item>
-		<item label="Fix Monitors" icon="gnome-do-panel">
-			<action name="Execute"><command>/usr/bin/fix-monitors</command></action>
-		</item>
-		<item label="Gallery" icon="/home/ryne/.local/share/waydroid/data/icons/com.android.gallery3d.png">
-			<action name="Execute"><command>waydroid app launch com.android.gallery3d</command></action>
-		</item>
-		<item label="Google Play Store" icon="/home/ryne/.local/share/waydroid/data/icons/com.android.vending.png">
-			<action name="Execute"><command>waydroid app launch com.android.vending</command></action>
-		</item>
-		<item label="Instagram" icon="/home/ryne/.local/share/waydroid/data/icons/com.instagram.android.png">
-			<action name="Execute"><command>waydroid app launch com.instagram.android</command></action>
-		</item>
-		<item label="Kill Picom" icon="(null)">
-			<action name="Execute"><command>/home/ryne/.bin/stop-picom</command></action>
-		</item>
-		<item label="Magisk Delta" icon="/home/ryne/.local/share/waydroid/data/icons/io.github.huskydg.magisk.png">
-			<action name="Execute"><command>waydroid app launch io.github.huskydg.magisk</command></action>
-		</item>
-		<item label="Music" icon="/home/ryne/.local/share/waydroid/data/icons/org.lineageos.eleven.png">
-			<action name="Execute"><command>waydroid app launch org.lineageos.eleven</command></action>
-		</item>
 		<item label="OpenTabletDriver" icon="otd">
 			<action name="Execute"><command>/usr/bin/otd-gui</command></action>
-		</item>
-		<item label="Power Off Monitors" icon="(null)">
-			<action name="Execute"><command>/usr/bin/moff</command></action>
-		</item>
-		<item label="Recorder" icon="/home/ryne/.local/share/waydroid/data/icons/org.lineageos.recorder.png">
-			<action name="Execute"><command>waydroid app launch org.lineageos.recorder</command></action>
 		</item>
 		<item label="Rofi" icon="rofi">
 			<action name="Execute"><command>rofi -show</command></action>
 		</item>
 		<item label="Rofi Theme Selector" icon="rofi">
 			<action name="Execute"><command>rofi-theme-selector</command></action>
-		</item>
-		<item label="Settings" icon="/home/ryne/.local/share/waydroid/data/icons/com.android.settings.png">
-			<action name="Execute"><command>waydroid app launch com.android.settings</command></action>
-		</item>
-		<item label="Smart Dock" icon="/home/ryne/.local/share/waydroid/data/icons/cu.axel.smartdock.png">
-			<action name="Execute"><command>waydroid app launch cu.axel.smartdock</command></action>
-		</item>
-		<item label="Substack" icon="/home/ryne/Pictures/Icons/substack.png">
-			<action name="Execute"><command>/home/ryne/.electronapps/Substack-linux-x64/Substack</command></action>
-		</item>
-		<item label="Threads" icon="/home/ryne/.local/share/waydroid/data/icons/com.instagram.barcelona.png">
-			<action name="Execute"><command>waydroid app launch com.instagram.barcelona</command></action>
-		</item>
-		<item label="Ubisoft Connect" icon="F24A_UbisoftConnect.0">
-			<action name="Execute"><command>env WINEPREFIX="/home/ryne/Games/ubisoft-connect" wine C:\\users\\ryne\\AppData\\Roaming\\Microsoft\\Windows\\Start\ Menu\\Programs\\Ubisoft\\Ubisoft\ Connect\\Ubisoft\ Connect.lnk</command></action>
-		</item>
-		<item label="Uninstall" icon="283B_Uninstall.0">
-			<action name="Execute"><command>env WINEPREFIX="/home/ryne/Games/ubisoft-connect" wine C:\\users\\ryne\\AppData\\Roaming\\Microsoft\\Windows\\Start\ Menu\\Programs\\Ubisoft\\Ubisoft\ Connect\\Uninstall.lnk</command></action>
-		</item>
-		<item label="Uninstall Dark and Darker A5" icon="E723_Dark and Darker A5 Uninstaller.0">
-			<action name="Execute"><command>env WINEPREFIX="/home/ryne/Games/dark-and-darker" wine C:\\users\\ryne\\AppData\\Roaming\\Microsoft\\Windows\\Start\ Menu\\Programs\\IRONMACE\\Dark\ and\ Darker\ A5\\Uninstall\ Dark\ and\ Darker\ A5.lnk</command></action>
-		</item>
-		<item label="Wallhaven Wallpapers" icon="/home/ryne/.local/share/waydroid/data/icons/net.softandroid.simplewallpapers.png">
-			<action name="Execute"><command>waydroid app launch net.softandroid.simplewallpapers</command></action>
-		</item>
-		<item label="Waydroid" icon="waydroid">
-			<action name="Execute"><command>waydroid show-full-ui</command></action>
-		</item>
-		<item label="WireGuard" icon="/home/ryne/.local/share/waydroid/data/icons/com.wireguard.android.png">
-			<action name="Execute"><command>waydroid app launch com.wireguard.android</command></action>
 		</item>
 	</menu> <!-- Other -->
 </menu> <!-- root-menu -->
