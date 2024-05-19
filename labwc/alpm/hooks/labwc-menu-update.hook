@@ -7,4 +7,4 @@ Target = *
 
 [Action]
 When = PostTransaction
-Exec = /usr/bin/su - ryne -c "/home/ryne/.bin/update-labwc-menu-usr"
+Exec = /usr/bin/su - <USER> -c "/wherever/your/bin/is/located/update-labwc-menu-usr"
